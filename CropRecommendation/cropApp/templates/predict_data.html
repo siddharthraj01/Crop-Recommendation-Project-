@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<section class="section-services section-t8">
+    <div class="container">
+    <h3>Crops Prediction Form</h3><hr>
+    <div class="form">
+      <form class="form-a" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-4 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="nitrogen">Nitrogen in soil</label>
+              <input type="text" class="form-control form-control-a" placeholder="Ratio of nitrogen in soil" id="nitrogen" name="nitrogen" required>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="phosphorous">Phosphorous in soil</label>
+              <input type="text" class="form-control form-control-a" placeholder="Ratio of phosphorous in soil" id="phosphorous" name="phosphorous" required>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="potassium">Potassium in soil</label>
+              <input type="text" class="form-control form-control-a" placeholder="Ratio of potassium in soil" id="potassium" name="potassium" required>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="temperature">Temperature(in °C)</label>
+              <input type="text" class="form-control form-control-a" placeholder="Temperature" id="temperature" name="temperature" required>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="humidity">Relative Humidity</label>
+              <input type="text" class="form-control form-control-a" placeholder="Humidity" id="humidity" name="humidity" required>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="ph">pH value of soil </label>
+              <input type="text" class="form-control form-control-a" placeholder="pH value of soil" id="ph" name="ph" required>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="rainfall">Rainfall(in mm)</label>
+              <input type="text" class="form-control form-control-a" placeholder="rainfall in mm " id="rainfall" name="rainfall" required>
+            </div>
+          </div>
+          
+          
+          
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Predict</button>
+          </div>
+        </div>
+      </form>
+      <div class="container">
+          {% if output %}
+            <h4 align="center" style="color:green">Our Recommended Crop is {{output}}</h4><hr>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% include 'footer.html' %}
+{% endblock  %}
