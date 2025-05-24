@@ -21,7 +21,7 @@ Technologies Used
 2) Scikit-learn: Machine learning library used for model training, evaluation, and prediction.
 3) Pandas: Data manipulation library used for data preprocessing and analysis.
 4) NumPy: Library for numerical computing used for handling arrays and mathematical operations.
-5) Flask: Web framework used for building the user interface and handling HTTP requests.
+5) Django: Web framework used for building the user interface and handling HTTP requests.
 6) HTML/CSS: Markup and styling languages used for designing the web interface.
 7) JavaScript: Scripting language used for client-side interactions and enhancing the user interface.
 
